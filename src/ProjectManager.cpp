@@ -470,8 +470,9 @@ void ProjectManager::OnCloseWindow(wxCloseEvent & event)
 
    // We may not bother to prompt the user to save, if the
    // project is now empty.
-   if (!sbSkipPromptingForSave 
-      && event.CanVeto() 
+   if (!sbSkipPromptingForSave
+      && event.CanVeto()
+      && !settings.DontCareAboutSave()
       && (settings.EmptyCanBeDirty() || bHasTracks)) {
       if ( UndoManager::Get( project ).UnsavedChanges() ) {
          TitleRestorer Restorer( window, project );// RAII

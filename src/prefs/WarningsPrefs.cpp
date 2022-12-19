@@ -88,6 +88,9 @@ void WarningsPrefs::PopulateOrExchange(ShuttleGui & S)
       S.TieCheckBox(XXO("Missing file &name extension during export"),
                     {wxT("/Warnings/MissingExtension"),
                      true});
+      S.TieCheckBox(XXO("Don't care about saving project"),
+                    {wxT("/GUI/DontCareAboutSave"),
+                     false});
    }
    S.EndStatic();
    S.EndScroller();

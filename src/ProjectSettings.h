@@ -120,6 +120,7 @@ public:
    bool IsSoloNone() const { return mSoloPref == wxT("None"); }
 
    bool EmptyCanBeDirty() const { return mEmptyCanBeDirty; }
+   bool DontCareAboutSave() const { return mDontCareAboutSave; }
 
    bool GetShowSplashScreen() const { return mShowSplashScreen; }
 
@@ -147,6 +148,7 @@ private:
    bool mShowId3Dialog{ true }; //lda
    bool mIsSyncLocked{ false };
    bool mEmptyCanBeDirty;
+   bool mDontCareAboutSave;
    bool mShowSplashScreen;
 };
 
